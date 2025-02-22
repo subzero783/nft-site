@@ -1,12 +1,22 @@
+import "./NavBar.scss";
+import MenuOne from "../MenuOne/MenuOne";
+import LogoOne from "../LogoOne/LogoOne";
+import SearchIconButton from "../SearchIconButton/SearchIconButton";
+import ButtonOne from "../ButtonOne/ButtonOne";
+
 const NavBar = () => {
   return (
     <nav>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Services</li>
-        <li>Contact</li>
-      </ul>
+      <LogoOne />
+      <MenuOne classname="top-menu" />
+      <div className="search-and-wallet-connect">
+        <SearchIconButton />
+        <ButtonOne
+          link="https://example.com/"
+          text="Wallet connect"
+          target="_blank"
+        />
+      </div>
     </nav>
   );
 };
